@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Defensa de la Razón Kantiana</title>
+    <title>Defensa de la Razón Kantiana - Versión Universalista</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -17,7 +17,7 @@
 
         body {
             font-family: 'Open Sans', sans-serif;
-            font-size: 18px; /* Tamaño de fuente aumentado para legibilidad */
+            font-size: 19px; /* Legibilidad optimizada */
             line-height: 1.8;
             color: var(--text-main);
             background-color: var(--bg-light);
@@ -25,10 +25,7 @@
             padding: 0;
         }
 
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary-dark);
-        }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: var(--primary-dark); }
 
         header {
             background: var(--primary-dark);
@@ -38,39 +35,19 @@
             border-bottom: 6px solid var(--accent-gold);
         }
 
-        header h1 { color: var(--white); font-size: 2.5rem; margin: 0; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-        }
-
-        .intro-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin-bottom: 3rem;
-            border-top: 4px solid var(--accent-gold);
-        }
-
-        /* Sección de Debates Dinámicos */
         .debate-section {
             display: grid;
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 320px 1fr;
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .menu-debates {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+        .menu-debates { display: flex; flex-direction: column; gap: 12px; }
 
         .btn-debate {
-            padding: 1rem;
+            padding: 1.2rem;
             border: none;
             background: var(--white);
             color: var(--primary-dark);
@@ -78,12 +55,12 @@
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: 0.3s;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .btn-debate:hover, .btn-debate.active {
@@ -94,43 +71,31 @@
 
         .content-debate {
             background: var(--white);
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            min-height: 400px;
-            animation: slideIn 0.4s ease-out;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            min-height: 450px;
+            animation: fadeIn 0.5s ease;
         }
 
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .vs-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .conclusion-box {
-            background: #f0f7ff;
-            border-left: 5px solid var(--primary-dark);
-            padding: 1.5rem;
-            margin-top: 2rem;
-            font-style: italic;
-        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         .tag {
-            font-size: 0.8rem;
-            padding: 4px 12px;
-            border-radius: 20px;
+            font-size: 0.85rem;
+            padding: 6px 15px;
+            border-radius: 25px;
             background: var(--accent-gold);
             color: var(--primary-dark);
             font-weight: bold;
-            text-transform: uppercase;
+        }
+
+        .conclusion-box {
+            background: #f8f1e5;
+            border-left: 6px solid var(--accent-gold);
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            font-style: italic;
+            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -138,23 +103,16 @@
 
 <header>
     <h1>Cátedra de Ética Deontológica</h1>
-    <p>Defensa Integral de la Razón sobre la Conveniencia</p>
+    <p>Defensa de Kant frente al espectro de teorías éticas</p>
 </header>
 
 <div class="container">
-    <div class="intro-card">
-        <h2>El Valor de la Intencionalidad</h2>
-        <p>
-            A diferencia de otras corrientes, la ética kantiana sostiene que el valor moral no reside en lo que "logramos", sino en la <strong>Buena Voluntad</strong>. 
-            Como el futuro es incierto y las consecuencias están fuera de nuestro control (Moral Luck), solo podemos ser responsables de nuestras intenciones y motivos.
-        </p>
-    </div>
-
-    <h2 style="text-align: center; margin-bottom: 2rem;">Simulador de Confrontación Filosófica</h2>
-    
     <div class="debate-section">
-        <div class="menu-debates" id="menu">
-            <button class="btn-debate active" onclick="mostrarDebate('utilitarismo', this)">
+        <div class="menu-debates">
+            <button class="btn-debate active" onclick="mostrarDebate('universalismo', this)">
+                <i class="fas fa-atlas"></i> Universalismo
+            </button>
+            <button class="btn-debate" onclick="mostrarDebate('utilitarismo', this)">
                 <i class="fas fa-calculator"></i> Utilitarismo
             </button>
             <button class="btn-debate" onclick="mostrarDebate('egoismo', this)">
@@ -175,63 +133,63 @@
 
 <script>
 const debates = {
+    universalismo: {
+        titulo: "Kantianismo vs. Universalismo General",
+        rival: "Sostiene que existen normas morales aplicables a todos, a menudo basadas en consensos sociales, derechos humanos o mandatos externos.",
+        defensa: "Kant lleva el universalismo más allá: no se trata de seguir reglas 'porque todos las aceptan', sino porque tu propia **razón autónoma** te obliga a ellas. Mientras otros universalismos pueden ser rígidos o impuestos, el de Kant se basa en la libertad de autogobernarse bajo el Imperativo Categórico.",
+        argumentoClave: "Autonomía vs. Consenso Externo",
+        cita: "La ley moral no nos es impuesta; nos la damos a nosotros mismos mediante la razón."
+    },
     utilitarismo: {
         titulo: "Kantianismo vs. Utilitarismo",
-        rival: "Postula que el fin justifica los medios si maximiza la felicidad general.",
-        defensa: "Kant responde que tratar a un ser humano como un simple 'número' o 'medio' para la felicidad de otros viola su dignidad intrínseca. Si permitimos excepciones 'por el bien común' (como la tortura), destruimos la base de la moralidad.",
-        argumentoClave: "Dignidad Humana vs. Utilidad Económica",
-        cita: "Las personas tienen dignidad (valor absoluto), las cosas tienen precio (valor relativo)."
+        rival: "El valor de una acción depende de sus resultados y la felicidad que genera.",
+        defensa: "Kant rechaza la 'suerte moral' de las consecuencias. Si actúas con **buena voluntad** pero el resultado es malo por azar, tu acción sigue siendo moralmente valiosa. El utilitarismo es peligroso porque sacrifica al individuo por el grupo.",
+        argumentoClave: "Dignidad Humana vs. Cálculo de Resultados",
+        cita: "El hombre es un fin en sí mismo, no un medio para la felicidad de otros."
     },
     egoismo: {
         titulo: "Kantianismo vs. Egoísmo Ético",
-        rival: "Sostiene que lo correcto es lo que beneficia al individuo.",
-        defensa: "Kant demuestra que el egoísmo es lógicamente imposible de universalizar. Si todos mintieran por beneficio propio, la comunicación perdería sentido. La moralidad requiere consistencia racional, no conveniencia personal.",
-        argumentoClave: "Ley Universal vs. Deseo Personal",
-        cita: "Hacer lo correcto porque es correcto, no porque me conviene."
+        rival: "Actuar correctamente es actuar en beneficio propio.",
+        defensa: "El egoísmo fracasa en la prueba de la **Ley Universal**. Si todos fueran egoístas, la confianza y la sociedad desaparecerían. La moralidad requiere que nuestras acciones sean coherentes para todos, sin excepciones personales.",
+        argumentoClave: "Consistencia Racional vs. Interés Propio",
+        cita: "Obra solo según una máxima tal que puedas querer al mismo tiempo que se torne ley universal."
     },
     virtud: {
         titulo: "Kantianismo vs. Ética de la Virtud",
-        rival: "Se enfoca en el carácter y los sentimientos del agente.",
-        defensa: "Kant advierte que los sentimientos son volátiles. Una persona 'buena por naturaleza' puede cambiar. La moralidad verdadera nace del respeto a la Ley Moral, que es firme incluso cuando nuestras emociones nos dicen lo contrario.",
-        argumentoClave: "Deber Racional vs. Inclinación Emocional",
-        cita: "La ética es un mandato de la razón, no una disposición del ánimo."
+        rival: "La moral depende del carácter y de las inclinaciones del individuo hacia 'el bien'.",
+        defensa: "Kant argumenta que los sentimientos y el carácter son volátiles. La verdadera moralidad surge cuando actuamos **por deber**, incluso cuando nuestro carácter o inclinaciones nos dicen lo contrario. El deber es constante; el sentimiento no.",
+        argumentoClave: "Deber Absoluto vs. Inclinación Natural",
+        cita: "Una acción por deber tiene su valor moral no en el propósito, sino en la máxima que la determina."
     },
     relativismo: {
         titulo: "Kantianismo vs. Relativismo Cultural",
-        rival: "Afirma que la moral es un producto de la cultura local.",
-        defensa: "Kant argumenta que la razón es una facultad universal de todo ser humano. La autonomía y la libertad no son preferencias culturales, sino condiciones necesarias de la agencia moral en cualquier parte del mundo.",
-        argumentoClave: "Universalismo vs. Tradición Local",
-        cita: "La justicia no depende del lugar de nacimiento, sino de la razón compartida."
+        rival: "La moral es subjetiva a cada cultura o tradición.",
+        defensa: "Kant sostiene que la razón es una facultad humana universal. Si la moral fuera relativa, no existiría base para denunciar la injusticia en otros lugares. El Imperativo Categórico ofrece un estándar de justicia que trasciende fronteras.",
+        argumentoClave: "Razón Universal vs. Costumbre Local",
+        cita: "La justicia es necesaria y universal, no una preferencia geográfica."
     }
 };
 
 function mostrarDebate(id, btn) {
-    // Actualizar botones
     document.querySelectorAll('.btn-debate').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-
     const data = debates[id];
-    const display = document.getElementById('debate-display');
-    
-    display.innerHTML = `
-        <div class="vs-header">
+    document.getElementById('debate-display').innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #eee; padding-bottom:1rem; margin-bottom:2rem;">
             <h3>${data.titulo}</h3>
             <span class="tag">${data.argumentoClave}</span>
         </div>
-        <p><strong>La Postura Rival:</strong> ${data.rival}</p>
-        <p style="margin-top: 1.5rem;"><strong>La Defensa de Kant:</strong> ${data.defensa}</p>
-        
+        <p><strong>Desafío Rival:</strong> ${data.rival}</p>
+        <p style="margin-top:1.5rem;"><strong>Respuesta de la Ética del Deber:</strong> ${data.defensa}</p>
         <div class="conclusion-box">
-            <i class="fas fa-quote-left" style="color: var(--accent-gold); margin-right: 10px;"></i>
+            <i class="fas fa-quote-left" style="color:var(--accent-gold); margin-right:10px;"></i>
             ${data.cita}
         </div>
     `;
 }
 
-// Cargar el primero por defecto
-window.onload = () => {
-    mostrarDebate('utilitarismo', document.querySelector('.btn-debate'));
-};
+// Inicializar
+window.onload = () => mostrarDebate('universalismo', document.querySelector('.active'));
 </script>
 
 </body>
