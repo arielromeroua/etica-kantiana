@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ética Kantiana - Presentación Dinámica</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --light: #ecf0f1;
+            --text: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 900px;
+            padding: 2rem;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            border-left: 5px solid var(--accent);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        .content {
+            display: none;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        .active .content {
+            display: block;
+        }
+        .badge {
+            background: var(--accent);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>La Ética de Immanuel Kant</h1>
+    <p>Resumen Interactivo de Principios y Críticas</p>
+</header>
+
+<div class="container">
+    <div class="card" onclick="toggleCard(this)">
+        <span class="badge">Base Moral</span>
+        <h2>1. La Buena Voluntad y el Deber</h2>
+        <div class="content">
+            <p><strong>Idea principal:</strong> Lo único bueno sin restricción es la "buena voluntad". No importan las consecuencias, sino la intención de hacer lo correcto porque es nuestro deber.</p>
+            <ul>
+                <li>Actuar <em>por deber</em> vs actuar por interés personal.</li>
+                <li>La moralidad está bajo nuestro control; los resultados no.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+        <span class="badge">Imperativo Categórico</span>
+        <h2>2. Respeto a la Humanidad</h2>
+        <div class="content">
+            <p><strong>Idea principal:</strong> "Trata a la humanidad siempre como un fin y nunca simplemente como un medio".</p>
+            <ul>
+                <li>Prohíbe la explotación y el uso de personas como objetos.</li>
+                <li>Se basa en la autonomía y el autogobierno de cada individuo.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+        <span class="badge">Imperativo Categórico</span>
+        <h2>3. Ley Universal</h2>
+        <div class="content">
+            <p><strong>Idea principal:</strong> Actúa solo según aquella máxima que puedas querer que se convierta en ley universal.</p>
+            <ul>
+                <li>Si no quieres que todos lo hagan, tú tampoco deberías hacerlo.</li>
+                <li>Elimina las excepciones personales o "privilegios" morales.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)" style="border-left-color: #e74c3c;">
+        <span class="badge" style="background: #e74c3c;">Perspectiva Crítica</span>
+        <h2>4. Críticas: Consecuencias y Rigidez</h2>
+        <div class="content">
+            <p><strong>Utilitarismo:</strong> ¿Es realmente correcto producir "menos bien" solo por seguir una regla?</p>
+            <p><strong>Absolutismo:</strong> La falta de excepciones puede ser problemática en dilemas extremos (ej. mentir para salvar una vida).</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleCard(element) {
+        element.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
